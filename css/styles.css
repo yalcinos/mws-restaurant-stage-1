@@ -199,6 +199,7 @@ nav h1 a {
   right: 0;
   top: 80px;
   width: 50%;
+  margin-bottom: 20px;
 }
 .inside #map {
   background-color: #ccc;
@@ -208,7 +209,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -224,8 +225,9 @@ nav h1 a {
 	width: 90%;
 }
 #restaurant-address {
-  font-size: 12pt;
+  font-size: 15pt;
   margin: 10px 0px;
+  width: 60%;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -273,10 +275,13 @@ nav h1 a {
 #reviews-list li p {
   margin: 0 0 10px;
 }
+#restaurant-hours{
+  width: 80%;
+}
 #restaurant-hours td {
   color: #666;
 }
-#header-title{
+.header-title{
   margin-top: 25px;
   display: inline-block;
 }
@@ -293,6 +298,97 @@ nav h1 a {
 @media screen and (max-width: 550px){
   nav h1 a {
     font-size: 17px;
+    letter-spacing: 7px;
+  }
+}
+
+@media screen and (max-width: 1250px){
+  #reviews-container li{
+    width: 82%;
+  }
+}
+@media screen and (max-width: 1050px){
+    #reviews-container li{
+    width: 77%;
+  }
+   #restaurant-img{
+    width:85%;
+  }
+  #restaurant-cuisine{
+    width: 85%;
+  }
+}
+@media screen and (max-width: 850px){
+    #reviews-container li{
+    width: 72%;
+  }
+}
+@media screen and (max-width: 750px){
+  #restaurant-name{
+    font-size: 15pt;
+  }
+  #restaurant-img{
+    width: 80%;
+  }
+  #restaurant-cuisine{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px){
+    #reviews-container li{
+    width: 67%;
+  }
+}
+@media screen and (max-width: 600px){
+    #reviews-container li{
+    width: 62%;
+  }
+  #restaurant-name{
+    font-size: 13pt; 
+  }
+}
+@media screen and (max-width: 550px){
+    #restaurant-name{
+    font-size: 11pt;
+    margin-top: 40px;
+
+  }
+   #restaurant-img{
+    width:75%;
+  }
+  #restaurant-cuisine{
+    width: 75%;
+  }
+}
+@media screen and (max-width: 500px){
+    #reviews-container li{
+    width: 57%;
+  }
+}
+@media screen and (max-width: 450px){
+   #restaurant-name{
+    font-size: 9pt;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 400px){
+    #reviews-container li{
+    width: 52%;
+  }
+   #restaurant-img{
+    width:70%;
+  }
+  #restaurant-cuisine{
+    width: 70%;
+  }
+  #restaurant-container{
+    padding: 140px 25px 30px;             
+  }
+}
+@media screen and (max-width: 350px){
+    nav h1 a {
+    font-size: 15px;
     letter-spacing: 7px;
   }
 }
