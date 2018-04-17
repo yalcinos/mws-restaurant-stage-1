@@ -119,6 +119,7 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
+  name.style.fontWeight="bold";
   li.appendChild(name);
 
   const date = document.createElement('p');
@@ -127,6 +128,21 @@ createReviewHTML = (review) => {
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  if(review.rating===5){
+    rating.style.background="#269900";
+  }
+  else if(review.rating===4){
+    rating.style.background="#39e600";
+  }
+  else if(review.rating===3){
+  rating.style.background="#e67300";
+  }
+  else
+    rating.style.background="#e60000";
+  rating.style.width="70px";
+  rating.style.color="white";
+  rating.style.fontWeight="bold";
+  
   li.appendChild(rating);
 
   const comments = document.createElement('p');
