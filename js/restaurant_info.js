@@ -119,12 +119,13 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  name.style.fontWeight="bold";
+  name.classList.add("comment-username");
   li.appendChild(name);
 
-  const date = document.createElement('p');
+  const date = document.createElement('div');
   date.innerHTML = review.date;
-  li.appendChild(date);
+  date.classList.add("reviews-date");
+  name.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
@@ -141,6 +142,8 @@ createReviewHTML = (review) => {
     rating.style.background="#e60000";
   rating.style.width="70px";
   rating.style.color="white";
+  rating.style.borderRadius="5px";
+  rating.style.marginLeft="10px";
   rating.style.fontWeight="bold";
   
   li.appendChild(rating);
