@@ -2,38 +2,38 @@
 /* CSS Document */
 
 body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
-	line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
-	margin: 0;
-	position:relative;
+  background-color: #fdfdfd;
+  margin: 0;
+  position:relative;
 }
 ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
 }
 a {
-	color: orange;
-	text-decoration: none;
+  color: orange;
+  text-decoration: none;
 }
 a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
+  color: #3397db;
+  text-decoration: none;
 }
 a img{
-	border: none 0px #fff;
+  border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -71,7 +71,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: calc(50% - 70px);
 }
 
 /* Display list items side by side */
@@ -198,7 +198,7 @@ nav h1 a {
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 49%;
   margin-bottom: 20px;
 }
 .inside #map {
@@ -222,7 +222,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	width: 90%;
+  width: 90%;
 }
 #restaurant-address {
   font-size: 15pt;
@@ -239,12 +239,12 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 90%;
+  width: 90%;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 140px 20px 30px;
   width: 50%;
 }
 #reviews-container {
@@ -287,108 +287,27 @@ nav h1 a {
 }
 @media screen and (max-width: 460px){
   .filter-options select{
-      width: 160px;
+    width: 150px;
+    align-self: center;
   }
 }
-@media screen and (max-width: 365px){
-  .filter-options select{
-    width: 155px;
-  }
-}
-@media screen and (max-width: 550px){
-  nav h1 a {
-    font-size: 17px;
-    letter-spacing: 7px;
-  }
-}
-
-@media screen and (max-width: 1250px){
-  #reviews-container li{
-    width: 82%;
-  }
-}
-@media screen and (max-width: 1050px){
-    #reviews-container li{
-    width: 77%;
-  }
-   #restaurant-img{
-    width:85%;
-  }
-  #restaurant-cuisine{
-    width: 85%;
-  }
-}
-@media screen and (max-width: 850px){
-    #reviews-container li{
-    width: 72%;
-  }
-}
-@media screen and (max-width: 750px){
-  #restaurant-name{
-    font-size: 15pt;
-  }
-  #restaurant-img{
-    width: 80%;
-  }
-  #restaurant-cuisine{
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 700px){
-    #reviews-container li{
-    width: 67%;
-  }
-}
-@media screen and (max-width: 600px){
-    #reviews-container li{
-    width: 62%;
-  }
-  #restaurant-name{
-    font-size: 13pt; 
-  }
-}
-@media screen and (max-width: 550px){
-    #restaurant-name{
-    font-size: 11pt;
-    margin-top: 40px;
-
-  }
-   #restaurant-img{
-    width:75%;
+@media screen and (max-width: 480px){
+    #restaurant-img{
+    width: 75%;
   }
   #restaurant-cuisine{
     width: 75%;
   }
 }
-@media screen and (max-width: 500px){
-    #reviews-container li{
-    width: 57%;
-  }
+@media screen and (min-width: 481px){
+ 
 }
-@media screen and (max-width: 450px){
-   #restaurant-name{
-    font-size: 9pt;
-    margin-top: 60px;
-  }
-}
-@media screen and (max-width: 400px){
-    #reviews-container li{
-    width: 52%;
-  }
-   #restaurant-img{
-    width:70%;
+@media screen and (min-width: : 1024px){
+ 
+  #restaurant-img{
+    width: 85%;
   }
   #restaurant-cuisine{
-    width: 70%;
-  }
-  #restaurant-container{
-    padding: 140px 25px 30px;             
-  }
-}
-@media screen and (max-width: 350px){
-    nav h1 a {
-    font-size: 15px;
-    letter-spacing: 7px;
+    width: 85%;
   }
 }
