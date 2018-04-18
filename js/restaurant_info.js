@@ -127,6 +127,9 @@ createReviewHTML = (review) => {
   date.classList.add("reviews-date");
   name.appendChild(date);
 
+/**
+*Add color style for rating score
+*/
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
   if(review.rating===5){
@@ -180,3 +183,18 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+/**
+* Add scroll button for go back to default position.
+*/
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 500) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});

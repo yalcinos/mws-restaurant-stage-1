@@ -218,6 +218,7 @@ nav h1 a {
   background-color: #ccc;
   height: 400px;
   width: 100%;
+  border: 1px solid gray;
 }
 .inside #footer {
   bottom: 0;
@@ -308,6 +309,45 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}#return-to-top {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
 }
 .header-title{
   margin-top: 25px;
@@ -349,7 +389,15 @@ nav h1 a {
   #footer{
     font-size: 6pt;
   }
-
+  #return-to-top{
+    right: 2px;
+    width: 45px;
+    height: 45px;
+  }
+  #return-to-top i{
+    left: 14px;
+    top:  11px;
+  }
 }
 @media screen and (min-width: 481px) and (max-width: 1024px){
 
