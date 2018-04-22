@@ -176,3 +176,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+  
+
+   window.onload=function(){
+     var missedDiv2=$('.gm-style:first-child')[0].childNodes[0];
+      //missedDiv2.setAttribute("tabIndex","-1");
+      missedDiv2.setAttribute("tabindex","-1");
+       var missedDiv1=$('.gm-style:first-child')[0].childNodes[1];
+       missedDiv1.setAttribute("tabindex","-1");
+       var googlemapLogo=$('.gm-style:first-child')[0].childNodes[2];
+        var gmap=googlemapLogo.childNodes[0];
+    }
+   
