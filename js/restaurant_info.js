@@ -198,3 +198,15 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+setInterval(function(){
+  var scrollPosition=document.documentElement;
+  var scrollT=scrollPosition.scrollTop
+  if(scrollT=(scrollT-65)){
+  $('#map-container').css("height","78%");
+  }else{
+  $('#map-container').css("height","90%");
+  }
+},100)
+
+
