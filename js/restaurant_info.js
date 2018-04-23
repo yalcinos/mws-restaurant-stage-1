@@ -199,9 +199,13 @@ $('#return-to-top').click(function() {      // When arrow is clicked
     }, 500);
 });
 
+/** This code is not work.I tried to write code which help to adjust height of the map when user scroll
+ *   Probably I should have use "less" or "sass" for this code but now this is not our topic.
+**/
 setInterval(function(){
   var scrollPosition=document.documentElement;
   var scrollT=scrollPosition.scrollTop
+  //this 65 is footer height because 
   if(scrollT=(scrollT-65)){
   $('#map-container').css("height","78%");
   }else{
