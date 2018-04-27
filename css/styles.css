@@ -353,12 +353,9 @@ nav h1 a {
   margin-top: 25px;
   display: inline-block;
 }
-@media screen and (max-width: 460px){
-  .filter-options select{
-    width: 150px;
-    align-self: center;
-  }
-}
+/**
+For mobile devices
+*/
 @media screen and (max-width: 480px){
   #restaurant-img{
     width: 75%;
@@ -385,6 +382,8 @@ nav h1 a {
   }
   .filter-options select{
     font-size: 9pt;
+      width: 150px;
+    align-self: center;
   }
   #footer{
     font-size: 6pt;
@@ -400,6 +399,9 @@ nav h1 a {
   }
  
 }
+/**
+For mobile and tablet PCs
+*/
 @media screen and (min-width: 481px) and (max-width: 1024px){
   #reviews-container{
     width: 85%;
@@ -409,19 +411,17 @@ nav h1 a {
   #restaurant-name{
     font-size: 15pt;
   }
-}
-@media screen and (min-width: : 1025px){
-  #restaurant-img{
+  #restaurant-container{
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 30px 20px 60px;
   }
   #restaurant-cuisine{
     width: 90%;
   }
-  #reviews-container{
-    width: 50%;
-  }
 }
-/**mobile phones **/
+/**Adjust Map container for mobile phones **/
 @media screen and (max-width: 840px){
    #map-container{
     position: inherit;

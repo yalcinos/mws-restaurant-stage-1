@@ -12,10 +12,10 @@ module.exports = function(grunt) {
     responsive_images: {
       dev: {
         options: {
-          engine: 'im',
+          engine: 'gm',
           sizes: [{
-            width: 800,
-            suffix: '_small',
+            width: 300,
+            suffix: '_deneme',
             quality: 30
           }]
         },
@@ -58,7 +58,10 @@ module.exports = function(grunt) {
 
   });
 
-   grunt.loadNpmTasks('grunt-responsive-images');
-  grunt.registerTask('default', ['responsive_images']);
+  grunt.loadNpmTasks('grunt-responsive-images');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-mkdir');
+  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
 
 };

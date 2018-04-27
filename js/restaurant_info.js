@@ -54,13 +54,36 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
-
-  const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-
+  //const image = document.getElementById('restaurant-img');
+  //image.className = 'restaurant-img'
+  //image.src = DBHelper.imageUrlForRestaurant(restaurant);
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
+
+/**
+* Create media queries for making responsive images for diffrent devices
+*/
+const picture=document.getElementsByTagName("picture");
+
+//create img tag and add attributes for responsiveness
+const img=document.createElement("img");
+img.id='restaurant-img';
+img.className='restaurant-img';
+
+//Add source attr to picture tag
+const source1=document.getElementsByTagName("source");
+const source2=document.createElement("source");
+ source1[0].media="(min-width:1024px)";
+ source2.media="(min-width:480px)";
+ for(var i=1; i<=10; i++){
+  if(restaurant.id==i){
+  img.src = "images/"+i+"-500_small.jpg";
+  source1[0].srcset=DBHelper.imageUrlForRestaurant(restaurant);
+  source2.srcset="images/"+i+"-1000_medium.jpg";
+  }
+ }
+ picture[0].appendChild(source2);
+ picture[0].appendChild(img);
 
   // fill operating hours
   if (restaurant.operating_hours) {
