@@ -71,7 +71,7 @@ const img=document.createElement("img");
 img.id='restaurant-img';
 img.className='restaurant-img';
 
-//Add source attr to picture tag
+//Add source attr to picture tag and make responsive images
 const source1=document.getElementsByTagName("source");
 const source2=document.createElement("source");
  source1[0].media="(min-width:1024px)";
@@ -207,25 +207,11 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
-/**
-* Add scroll button for go back to default position.
-*/
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 500) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
+
 
 /** This code is not work.I tried to write code which help to adjust height of the map when user scroll
  *   Probably I should have use "less" or "sass" for this code but now this is not our topic.
-**/
+
 setInterval(function(){
   var scrollPosition=document.documentElement;
   var scrollT=scrollPosition.scrollTop
@@ -236,5 +222,6 @@ setInterval(function(){
   $('#map-container').css("height","90%");
   }
 },100)
+*/
 
 
