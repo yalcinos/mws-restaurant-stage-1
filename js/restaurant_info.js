@@ -46,12 +46,14 @@ fetchRestaurantFromURL = (callback) => {
 }
 
 /**
- * Create restaurant HTML and add it to the webpage
+ * Create restaurant HTML  add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
+  var altArray=["Mission Chinese Food","Emily","Kang Ho Dong Baekjeong","Katz's Delicatessen",
+  "Roberta's Pizza","Hometown BBQ","Superiority Burger","The Dutch","Mu Ramen","Casa Enrique"];
+
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
-
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -76,9 +78,13 @@ const source2=document.createElement("source");
   if(restaurant.id==i){
   img.src = "images/"+i+"-500_small.jpg";
   source1[0].srcset=DBHelper.imageUrlForRestaurant(restaurant);
+  //source1[0].setAttribute('alt',altArray[i-1]);
+  //source2.setAttribute('alt',altArray[i-1]);
+  img.setAttribute('alt',altArray[i-1]);
   source2.srcset="images/"+i+"-1000_medium.jpg";
   }
  }
+
  picture[0].appendChild(source2);
  picture[0].appendChild(img);
 

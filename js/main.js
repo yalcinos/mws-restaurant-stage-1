@@ -137,12 +137,15 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Add responsive images to list.
  */
 createRestaurantHTML = (restaurant) => {
+  var altArray=["Mission Chinese Food","Emily","Kang Ho Dong Baekjeong","Katz's Delicatessen",
+  "Roberta's Pizza","Hometown BBQ","Superiority Burger","The Dutch","Mu Ramen","Casa Enrique"];
   const li = document.createElement('li');
   const picture = document.createElement('picture');
   const source1=document.createElement("source");
   const source2=document.createElement("source");
   const image = document.createElement('img');
 
+  image.id='restaurant-img';
   image.className = 'restaurant-img';
   source1.media="(min-width:1024px)";
   source2.media="(min-width:480px)";
@@ -152,13 +155,14 @@ createRestaurantHTML = (restaurant) => {
   image.src = "images/"+i+"-500_small.jpg";
   source1.srcset=DBHelper.imageUrlForRestaurant(restaurant);
   source2.srcset="images/"+i+"-1000_medium.jpg";
+  image.alt=altArray[i-1];
   }
  }
   li.append(picture);
   picture.append(source1);
   picture.append(source2);
   picture.append(image);
-
+  
   
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
