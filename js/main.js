@@ -134,7 +134,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 /**
  * Create restaurant HTML.
- *Add responsive images to list.
+ * Add responsive images to list.
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
