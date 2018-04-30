@@ -134,15 +134,32 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 /**
  * Create restaurant HTML.
+ *Add responsive images to list.
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
+  const picture = document.createElement('picture');
+  const source1=document.createElement("source");
+  const source2=document.createElement("source");
   const image = document.createElement('img');
-  image.className = 'restaurant-img';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  li.append(image);
 
+  image.className = 'restaurant-img';
+  source1.media="(min-width:1024px)";
+  source2.media="(min-width:480px)";
+
+ for(var i=1; i<=10; i++){
+  if(restaurant.id==i){
+  image.src = "images/"+i+"-500_small.jpg";
+  source1.srcset=DBHelper.imageUrlForRestaurant(restaurant);
+  source2.srcset="images/"+i+"-1000_medium.jpg";
+  }
+ }
+  li.append(picture);
+  picture.append(source1);
+  picture.append(source2);
+  picture.append(image);
+
+  
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
   li.append(name);
@@ -177,14 +194,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 }
   
-
-   window.onload=function(){
-     var missedDiv2=$('.gm-style:first-child')[0].childNodes[0];
-      //missedDiv2.setAttribute("tabIndex","-1");
-      missedDiv2.setAttribute("tabindex","-1");
-       var missedDiv1=$('.gm-style:first-child')[0].childNodes[1];
-       missedDiv1.setAttribute("tabindex","-1");
-       var googlemapLogo=$('.gm-style:first-child')[0].childNodes[2];
-        var gmap=googlemapLogo.childNodes[0];
-    }
-   
