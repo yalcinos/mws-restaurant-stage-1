@@ -12,12 +12,15 @@ if ('serviceWorker' in navigator) {
 }
 **/
 var staticCacheName='restaurant-v1';
+
 self.addEventListener('install',function(event){
 	var urlsToCache=[
 		'/',
 		'js/dbhelper.js',
 		'js/main.js',
-		'js/restaurant_info.js'
+		'js/restaurant_info.js',
+		'data/restaurants.json',
+		'css/styles.css'
 	];
 
 	event.waitUntil(
@@ -26,20 +29,30 @@ self.addEventListener('install',function(event){
 			})
 		)
 });
+self.addEventListener('fetch',function(event){
+	event.respondWith(
+		caches.match(event.request).then(function(response){
+			if(response) return response;
+			return fetch(event.request);
+		})
+	);
+});
 
-self.addEventListener('active',function(event){
+
+self.addEventListener('activate',function(event){
 	event.waitUntil(
 			//get all cache name that exist.
 			caches.keys().then(function(cacheNames){
 				return Promise.all(
-						return cacheNames.filter(function(cacheName){
-					return cacheName.startWith('restaurant-') &&
-					cacheName != staticCacheName;
+						 cacheNames.filter(function(cacheName){
+					return cacheName.startsWith('restaurant-') && cacheName != staticCacheName;
 					}).map(function(cacheName){
 					return cache.delete(cacheName);
 				})
 			);
 				
-		});
+		})
 	);
 });
+
+
