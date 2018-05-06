@@ -49,8 +49,11 @@ fetchRestaurantFromURL = (callback) => {
  * Create restaurant HTML  add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
-  var altArray=["Mission Chinese Food","Emily","Kang Ho Dong Baekjeong","Katz's Delicatessen",
-  "Roberta's Pizza","Hometown BBQ","Superiority Burger","The Dutch","Mu Ramen","Casa Enrique"];
+  var altArray=["An Image of Mission Chinese Food Restaurant","An Image of Emily Restaurant",
+  "An Image of Kang Ho Dong Baekjeong Restaurant","An Image of Katz's Delicatessen Restaurant",
+  "An Image of Roberta's Pizza Restaurant","An Image of Hometown BBQ Restaurant",
+  "An Image of ImaSuperiority Burger Restaurant","An Image of The Dutch Restaurant","An Image of Mu Ramen Restaurant",
+  "An Image of Casa Enrique Restaurant"];
 
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
