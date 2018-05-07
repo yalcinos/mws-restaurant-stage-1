@@ -149,7 +149,6 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-
 }
 #restaurants-list li {
   background-color: #fff;
@@ -416,6 +415,15 @@ For mobile and tablet PCs
   #restaurant-cuisine{
     width: 90%;
   }
+  #restaurants-list{
+    background-color: #f3f3f3;
+    list-style: outside none none;
+     margin: 0;
+    padding: 30px 15px 60px;
+    text-align: center;
+    display: grid;
+     grid-template-columns: repeat(2,1fr);
+  }
 }
 /**Adjust Map container for mobile phones **/
 @media screen and (max-width: 840px){
@@ -461,6 +469,15 @@ For mobile and tablet PCs
   }
   #restaurant-name{
     margin-left: 11%;
+  }
+  #restaurants-list{
+    background-color: #f3f3f3;
+    list-style: outside none none;
+     margin: 0;
+    padding: 30px 15px 60px;
+    text-align: center;
+    display: grid;
+     grid-template-columns: repeat(4,1fr);
   }
 
 }
