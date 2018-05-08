@@ -375,6 +375,16 @@ For mobile devices
   #restaurant-name{
     font-size: 15pt;
   }
+  #restaurants-list{
+    background-color: #f3f3f3;
+    list-style: outside none none;
+    margin: 0;
+    padding: 30px 15px 60px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
   .filter-options select{
     font-size: 9pt;
       width: 150px;
