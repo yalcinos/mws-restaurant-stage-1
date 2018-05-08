@@ -20,7 +20,9 @@ self.addEventListener('install',function(event){
 		'js/main.js',
 		'js/restaurant_info.js',
 		'data/restaurants.json',
-		'css/styles.css'
+		'css/styles.css',
+		'img',
+		'images'
 	];
 
 	event.waitUntil(
@@ -32,8 +34,7 @@ self.addEventListener('install',function(event){
 self.addEventListener('fetch',function(event){
 	event.respondWith(
 		caches.match(event.request).then(function(response){
-			if(response) return response;
-			return fetch(event.request);
+			return response || fetch(event.request);
 		})
 	);
 });
