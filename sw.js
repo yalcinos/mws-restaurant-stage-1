@@ -1,4 +1,4 @@
-/**
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -10,7 +10,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-**/
+
 var staticCacheName='restaurant-v1';
 
 self.addEventListener('install',function(event){
