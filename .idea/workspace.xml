@@ -1,192 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2029fef-9d29-41ef-b565-9c4cd5e8d951" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/1-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/10-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/2-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/3-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/4-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/5-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/6-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/7-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/8-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/9-1600_large_1x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/demo/angular.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/angular-sprintf.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/angular-sprintf.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/angular-sprintf.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/sprintf.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/sprintf.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/dist/sprintf.min.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/src/angular-sprintf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/src/sprintf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/argparse/node_modules/sprintf-js/test/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/.eslintrc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/CHANGELOG.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/CONTRIBUTING.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/camelize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/capitalize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/chars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/chop.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/classify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/clean.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/cleanDiacritics.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/count.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/dasherize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/decapitalize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/dedent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/dist/underscore.string.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/dist/underscore.string.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/endsWith.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/escapeHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/exports.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/adjacent.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/defaultToWhiteSpace.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/escapeChars.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/escapeRegExp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/htmlEntities.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/makeString.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/strRepeat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/helper/toPositive.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/humanize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/include.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/insert.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/isBlank.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/join.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/levenshtein.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/lines.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/lpad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/lrpad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/ltrim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/map.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/meteor-post.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/meteor-pre.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/naturalCmp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/numberFormat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/package.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/pad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/pred.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/prune.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/quote.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/repeat.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/replaceAll.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/reverse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/rpad.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/rtrim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/slugify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/splice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/sprintf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/startsWith.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/strLeft.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/strLeftBack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/strRight.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/strRightBack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/stripTags.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/succ.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/surround.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/swapCase.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/titleize.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/toBoolean.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/toNumber.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/toSentence.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/toSentenceSerial.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/trim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/truncate.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/underscored.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/unescapeHTML.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/unquote.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/vsprintf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/words.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-util/node_modules/underscore.string/wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/.eslintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/.eslintrc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/CONTRIBUTORS" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/benchmark/benchmark.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/dist/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/test/test_validation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.eslintignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.eslintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/History.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/browser.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/node.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/1-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/1-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/10-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/10-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/2-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/2-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/3-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/3-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/4-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/4-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/5-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/5-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/6-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/6-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/7-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/7-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/8-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/8-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/9-1600_large_2x.jpg" afterPath="$PROJECT_DIR$/images/9-1600_large_2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/restaurant_info.js" afterPath="$PROJECT_DIR$/js/restaurant_info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/balanced-match/README.md" afterPath="$PROJECT_DIR$/node_modules/balanced-match/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-log/index.js" afterPath="$PROJECT_DIR$/node_modules/grunt-legacy-log/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/grunt-legacy-log/package.json" afterPath="$PROJECT_DIR$/node_modules/grunt-legacy-log/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/LICENSE" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/README.md" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/bower.json" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/demo/angular.html" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/demo/angular.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/dist/angular-sprintf.min.js" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/dist/angular-sprintf.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/dist/angular-sprintf.min.js.map" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/dist/angular-sprintf.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/dist/sprintf.min.js" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/dist/sprintf.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/dist/sprintf.min.js.map" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/dist/sprintf.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/package.json" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/src/angular-sprintf.js" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/src/angular-sprintf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/src/sprintf.js" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/src/sprintf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/sprintf-js/test/test.js" afterPath="$PROJECT_DIR$/node_modules/sprintf-js/test/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/.npmignore" afterPath="$PROJECT_DIR$/node_modules/underscore.string/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/CHANGELOG.markdown" afterPath="$PROJECT_DIR$/node_modules/underscore.string/CHANGELOG.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/CONTRIBUTING.markdown" afterPath="$PROJECT_DIR$/node_modules/underscore.string/CONTRIBUTING.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/README.markdown" afterPath="$PROJECT_DIR$/node_modules/underscore.string/README.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/bower.json" afterPath="$PROJECT_DIR$/node_modules/underscore.string/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/camelize.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/camelize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/cleanDiacritics.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/cleanDiacritics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/component.json" afterPath="$PROJECT_DIR$/node_modules/underscore.string/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.min.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/dist/underscore.string.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/escapeHTML.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/escapeHTML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/exports.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/exports.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/escapeChars.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/helper/escapeChars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/helper/htmlEntities.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/helper/htmlEntities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/index.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/package.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/package.json" afterPath="$PROJECT_DIR$/node_modules/underscore.string/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/pad.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/pad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/prune.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/prune.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/slugify.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/slugify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/sprintf.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/sprintf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/toBoolean.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/toBoolean.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/vsprintf.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/vsprintf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/underscore.string/wrap.js" afterPath="$PROJECT_DIR$/node_modules/underscore.string/wrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restaurant.html" afterPath="$PROJECT_DIR$/restaurant.html" />
-    </list>
+    <list default="true" id="a2029fef-9d29-41ef-b565-9c4cd5e8d951" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -198,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="1-500_small.jpg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/images/1-500_small.jpg">
           <provider selected="true" editor-type-id="images">
@@ -252,7 +67,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,7 +84,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,33 +116,34 @@
       <option name="presentableId" value="Default" />
       <updated>1524862218932</updated>
       <workItem from="1524862220437" duration="118000" />
+      <workItem from="1526290064120" duration="5000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118000" />
+    <option name="totallyTimeSpent" value="123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="24" width="1863" height="1092" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -347,11 +163,17 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/1-1000_medium.jpg">
+    <entry file="file://$PROJECT_DIR$/images/1-800_large_1x.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/1-500_small.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/1-1000_medium.jpg" />
     <entry file="file://$PROJECT_DIR$/images/1-800_large_1x.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
