@@ -1,17 +1,28 @@
-var idb=require("idb");
+var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 
-var dbPromise = idb.open('test-db', function(upgradeDb) {
+var open = indexedDB.open('test-db',1);
 
-      var keyValStore = upgradeDb.createObjectStore('keyval');
-      keyValStore.put("world", "hello");
+// Create the schema
+open.onupgradeneeded = function() {
+    var db = open.result;
+    var store = db.createObjectStore("RestaurantStore", {keyPath:"id"});
+};
 
-});
-
-// read "hello" in "keyval"
-dbPromise.then(function(db) {
-  var tx = db.transaction('keyval');
-  var keyValStore = tx.objectStore('keyval');
-  return keyValStore.get('hello');
-}).then(function(val) {
-  console.log('The value of "hello" is:', val);
-});
+open.onsuccess = function() {
+		var db = open.result;
+      	 
+    // Start a new transaction
+      fetch("http://localhost:1337/restaurants/")
+      .then(function(response){
+         return response.json()
+      })
+      .then(function(jsonData){
+      	 var tx = db.transaction("RestaurantStore", "readwrite");
+   		 var store = tx.objectStore("RestaurantStore");
+   		 console.log(jsonData);
+      	for(var i=0; i<jsonData.length; i++){
+      		store.put(jsonData[i]);
+      	}
+      })
+}
+ 
