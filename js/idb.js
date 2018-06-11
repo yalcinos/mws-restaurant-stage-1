@@ -8,7 +8,7 @@ open.onupgradeneeded = function() {
     var store = db.createObjectStore("RestaurantStore", {keyPath:"id"});
 };
 
-open.onsuccess = function() {
+open.onsuccess = function CreateDB() {
 		var db = open.result;
       	 
     // Start a new transaction
@@ -23,6 +23,7 @@ open.onsuccess = function() {
       	for(var i=0; i<jsonData.length; i++){
       		store.put(jsonData[i]);
       	}
-      })
+      	return store.getAll();
+      });
 }
  

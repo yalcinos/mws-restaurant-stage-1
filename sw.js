@@ -24,7 +24,7 @@ self.addEventListener('install',function(event){
 		'img',
 		'images'
 	];
-
+	CreateDB();
 	event.waitUntil(
 			caches.open(staticCacheName).then(function(cache){
 				return cache.addAll(urlsToCache);
