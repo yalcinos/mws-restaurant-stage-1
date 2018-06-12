@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify')
 var babel= require('gulp-babel')
 var imagemin = require('gulp-imagemin')
 var jpgtran = require('imagemin-jpegtran')
+var rename = require('gulp-rename')
 var uglifyEs = require('gulp-uglify-es').default;
 
 
@@ -28,4 +29,11 @@ gulp.task('crunch-images', function() {
 	return gulp.src('images/**/*.jpg')
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/img'))
+})
+gulp.task('rename',function(){
+	gulp.src('images/**/*.jpg')
+	.pipe(rename(function(path){
+		path.extname = ".webp";
+	}))
+	.pipe(gulp.dest('dist/webp'))
 })

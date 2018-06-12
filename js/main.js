@@ -155,9 +155,9 @@ createRestaurantHTML = (restaurant) => {
 
  for(var i=1; i<=10; i++){
   if(restaurant.id==i){
-  image.src = "images/"+i+"-500_small.jpg";
+  image.src = "dist/webp/"+i+"-500_small.webp";
   source1.srcset=DBHelper.imageUrlForRestaurant(restaurant);
-  source2.srcset="images/"+i+"-1000_medium.jpg";
+  source2.srcset="dist/webp/"+i+"-1000_medium.webp";
   image.alt=altArray[i-1];
   }
  }
