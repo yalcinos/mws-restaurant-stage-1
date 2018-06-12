@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify')
 var babel= require('gulp-babel')
 var imagemin = require('gulp-imagemin')
 var pngquant = require('imagemin-pngquant')
+var uglifyEs = require('gulp-uglify-es').default;
 
 
 
@@ -15,8 +16,8 @@ gulp.task('default', function() {
 gulp.task('scripts-dist',function(){
 	gulp.src('js/**/*.js')
 		.pipe(babel())
-		//js dosyasının içerisindeki js fileları birleştirip all.js e dosyasını yaratıp içine atar.
 		.pipe(concat('all.js'))
-		.pipe(uglify())
+		//js dosyasının içerisindeki js fileları birleştirip all.js e dosyasını yaratıp içine atar.
+		.pipe(uglifyEs())
 		.pipe(gulp.dest('dist/js'))
 })
