@@ -15,3 +15,13 @@ gulp.task('default', function() {
 	gulp.watch('/index.js', ['copy-html'])
 	
 })
+gulp.task('scripts-dist',function(){
+	gulp.src('js/**/*.js')
+		.pipe(sourcmaps.init())
+		.pipe(babel())
+		//js dosyasının içerisindeki js fileları birleştirip all.js e dosyasını yaratıp içine atar.
+		.pipe(concat('all.js'))
+		.pipe(uglify())
+		.pipe(sourcmaps.write())
+		.pipe(gulp.dest('dist/js'))
+})
