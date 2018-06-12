@@ -3,21 +3,29 @@ var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var babel= require('gulp-babel')
 var imagemin = require('gulp-imagemin')
-var pngquant = require('imagemin-pngquant')
+var jpgtran = require('imagemin-jpegtran')
 var uglifyEs = require('gulp-uglify-es').default;
 
 
-
-gulp.task('default', function() {
-	//Asagıdakı kod : Eger sass dosyanın içerisinde herhangi bir .scss uzantılı dosyada degisiklik olursa. styles taskini çalıştır.
+gulp.task('default',['scripts-dist','scripts-dist-rest-info'], function() {
 
 	console.log('Success!');
 })
 gulp.task('scripts-dist',function(){
-	gulp.src('js/**/*.js')
-		.pipe(babel())
-		.pipe(concat('all.js'))
-		//js dosyasının içerisindeki js fileları birleştirip all.js e dosyasını yaratıp içine atar.
+	gulp.src(['js/dbhelper.js','js/idb.js','js/main.js'])
+		.pipe(concat('mainpage.min.js'))
 		.pipe(uglifyEs())
 		.pipe(gulp.dest('dist/js'))
+})
+
+gulp.task('scripts-dist-rest-info',function(){
+	gulp.src(['js/dbhelper.js','js/restaurant_info.js'])
+		.pipe(concat('rest-page.min.js'))
+		.pipe(uglifyEs())
+		.pipe(gulp.dest('dist/js'))
+})
+gulp.task('crunch-images', function() {
+	return gulp.src('images/**/*.jpg')
+		.pipe(imagemin())
+		.pipe(gulp.dest('dist/img'))
 })
