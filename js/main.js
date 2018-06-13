@@ -153,17 +153,17 @@ createRestaurantHTML = (restaurant) => {
   const source2=document.createElement("source");
   const image = document.createElement('img');
 
-  image.id='restaurant-img';
   image.className = 'restaurant-imgs';
   source1.media="(min-width:1024px)";
   source2.media="(min-width:480px)";
 
  for(var i=1; i<=10; i++){
   if(restaurant.id==i){
-  image.src = "images/"+i+"-500_small.jpg";
-  source1.srcset=DBHelper.imageUrlForRestaurant(restaurant);
-  source2.srcset="images/"+i+"-1000_medium.jpg";
-  image.alt=altArray[i-1];
+    image.id='restaurant'+i+'-img';
+    image.src = "images/"+i+"-500_small.jpg";
+    source1.srcset=DBHelper.imageUrlForRestaurant(restaurant);
+    source2.srcset="images/"+i+"-1000_medium.jpg";
+    image.alt=altArray[i-1];
   }
  }
   li.append(picture);
