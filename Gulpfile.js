@@ -6,6 +6,7 @@ var imagemin = require('gulp-imagemin')
 var jpgtran = require('imagemin-jpegtran')
 var rename = require('gulp-rename')
 var uglifyEs = require('gulp-uglify-es').default;
+var browserify = require('gulp-browserify')
 
 
 gulp.task('default',['scripts-dist','scripts-dist-rest-info'], function() {
@@ -36,4 +37,12 @@ gulp.task('rename',function(){
 		path.extname = ".webp";
 	}))
 	.pipe(gulp.dest('dist/webp'))
+})
+gulp.task('transfer',function(){
+	gulp.src('js/idb.js')
+	.pipe(babel({
+		presets:["es2015"]
+	}))
+	.pipe(browserify())
+	.pipe(gulp.dest('dist/js'))
 })
