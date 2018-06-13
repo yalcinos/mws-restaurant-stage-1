@@ -14,6 +14,8 @@ if ('serviceWorker' in navigator) {
 var staticCacheName='restaurant-v1';
 
 self.addEventListener('install',function(event){
+
+
 	var urlsToCache=[
 		'/',
 		'js/dbhelper.js',

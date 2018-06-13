@@ -1,10 +1,10 @@
 import idb from 'idb';
 
-    // Start a new transaction
-idb.open('keyval-store', 1, upgradeDB => {
+
+  idb.open('restaurant-store', 1, upgradeDB => {
   switch (upgradeDB.oldVersion) {
     case 0:
-      upgradeDB.createObjectStore('keyval', {keyPath:'id'});
+      upgradeDB.createObjectStore('items', {keyPath:'id'});
   }
 }).then(db => {
         fetch("http://localhost:1337/restaurants/")
@@ -12,8 +12,8 @@ idb.open('keyval-store', 1, upgradeDB => {
          return response.json()
         })
         .then(function(jsonData){
-          var tx = db.transaction("keyval", "readwrite");
-          var store = tx.objectStore("keyval");
+          var tx = db.transaction("items", "readwrite");
+          var store = tx.objectStore("items");
           console.log(jsonData);
           for(var i=0; i<jsonData.length; i++){
             store.put(jsonData[i]);
@@ -21,3 +21,4 @@ idb.open('keyval-store', 1, upgradeDB => {
             return tx.complete && store.getAll();
         });
 }).then(() => console.log("Done!"));
+

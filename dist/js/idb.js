@@ -7,18 +7,17 @@ var _idb2 = _interopRequireDefault(_idb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Start a new transaction
-_idb2.default.open('keyval-store', 1, function (upgradeDB) {
+_idb2.default.open('restaurant-store', 1, function (upgradeDB) {
   switch (upgradeDB.oldVersion) {
     case 0:
-      upgradeDB.createObjectStore('keyval', { keyPath: 'id' });
+      upgradeDB.createObjectStore('items', { keyPath: 'id' });
   }
 }).then(function (db) {
   fetch("http://localhost:1337/restaurants/").then(function (response) {
     return response.json();
   }).then(function (jsonData) {
-    var tx = db.transaction("keyval", "readwrite");
-    var store = tx.objectStore("keyval");
+    var tx = db.transaction("items", "readwrite");
+    var store = tx.objectStore("items");
     console.log(jsonData);
     for (var i = 0; i < jsonData.length; i++) {
       store.put(jsonData[i]);
