@@ -18,6 +18,6 @@ idb.open('keyval-store', 1, upgradeDB => {
           for(var i=0; i<jsonData.length; i++){
             store.put(jsonData[i]);
           }
-            return tx.complete && return store.getAll();
+            return tx.complete && store.getAll();
         });
 }).then(() => console.log("Done!"));
