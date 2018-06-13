@@ -14,7 +14,7 @@ gulp.task('default',['scripts-dist','scripts-dist-rest-info'], function() {
 	console.log('Success!');
 })
 gulp.task('scripts-dist',function(){
-	gulp.src(['js/dbhelper.js','js/idb.js','js/main.js'])
+	gulp.src(['js/dbhelper.js','js/main.js'])
 		.pipe(concat('mainpage.min.js'))
 		.pipe(uglifyEs())
 		.pipe(gulp.dest('dist/js'))

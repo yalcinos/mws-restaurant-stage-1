@@ -154,7 +154,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
 
   image.id='restaurant-img';
-  image.className = 'restaurant-img';
+  image.className = 'restaurant-imgs';
   source1.media="(min-width:1024px)";
   source2.media="(min-width:480px)";
 
