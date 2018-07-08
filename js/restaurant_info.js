@@ -84,7 +84,7 @@ const picture=document.getElementsByTagName("picture");
 //create img tag and add attributes for responsiveness
 const img=document.createElement("img");
 img.id='restaurant-img';
-img.className='restaurant-img';
+img.className='restaurant-imgs';
 
 //Add source attr to picture tag and make responsive images
 const source1=document.getElementsByTagName("source");
