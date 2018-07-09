@@ -262,6 +262,18 @@ nav h1 a {
   margin-left: auto;
   margin-right: auto;
 }
+#reviews-button{
+  font-family: Arial,sans-serif;
+  background: rgb(38, 153, 0);
+  position:relative;
+  left: 70%;
+  color: white;
+  bottom: 65px;
+  padding: 9px 22px;
+  font-size: 12pt;
+  border-radius: 10px;
+  text-align: center;
+}
 #reviews-container {
   width: 50%;
   padding: 30px 20px 80px 15px;
@@ -270,6 +282,7 @@ nav h1 a {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
+  margin-right: 45%;
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
@@ -493,4 +506,17 @@ For mobile and tablet PCs
   }
 
 }
+/**Adjust position of review button for all devices.
+**/
+@media screen and  (min-width: 840px) and (max-width: 1400px) {
+  #reviews-button{
+    left: 60%;
+  }
+}
+@media screen and  (min-width: 840px) and (max-width: 1024px) {
+  #reviews-button{
+    left: 60%;
+  }
+}
+
 

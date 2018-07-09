@@ -142,8 +142,12 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
+  const reviewButton = document.createElement('button');
+  reviewButton.id = 'reviews-button';
+  reviewButton.innerHTML = 'Add Review';
   title.innerHTML = 'Reviews';
   container.appendChild(title);
+  container.appendChild(reviewButton);
 
   if (!reviews) {
     const noReviews = document.createElement('p');
