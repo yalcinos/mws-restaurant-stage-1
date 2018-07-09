@@ -145,6 +145,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const reviewButton = document.createElement('button');
   const modal = document.getElementById('myModal');
   const span = document.getElementsByClassName("close")[0];
+  const restidInput = document.getElementById('resid');
   // When the user clicks the button, open the modal 
 reviewButton.onclick = function() {
     modal.style.display = "block";
@@ -161,7 +162,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
+  restidInput.value = self.restaurant.id;
   reviewButton.id = 'reviews-button';
   reviewButton.innerHTML = 'Add Review';
   title.innerHTML = 'Reviews';
