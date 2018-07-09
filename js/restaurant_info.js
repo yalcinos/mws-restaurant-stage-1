@@ -143,6 +143,25 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   const reviewButton = document.createElement('button');
+  const modal = document.getElementById('myModal');
+  const span = document.getElementsByClassName("close")[0];
+  // When the user clicks the button, open the modal 
+reviewButton.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
   reviewButton.id = 'reviews-button';
   reviewButton.innerHTML = 'Add Review';
   title.innerHTML = 'Reviews';
