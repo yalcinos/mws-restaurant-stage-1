@@ -393,8 +393,10 @@ nav h1 a {
     position: relative;
     background-color: #fefefe;
     margin: auto;
+    border-radius: 7px;
     padding: 0;
     border: 1px solid #888;
+    top: 100px;
     width: 40%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
@@ -419,12 +421,12 @@ input[type=submit]:hover {
 /* Add Animation */
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
+    to {top:100px; opacity:1}
 }
 
 @keyframes animatetop {
     from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
+    to {top:100px; opacity:1}
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -474,6 +476,7 @@ For mobile devices
     font-size: 15pt;
     letter-spacing:6px;
   }
+  
   #reviews-container{
     width: 90%;
     margin-left: 5%;
