@@ -187,10 +187,28 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  li.append(more);
+
+  const favdiv=document.createElement("div");
+  const divHearth=document.createElement('img');
+  divHearth.className="fav-icon";
+  divHearth.src="img/heart.svg";
+  divHearth.align="right";
+  divHearth.addEventListener("click", function(){
+    if(divHearth.src="img/heart.svg"){
+        divHearth.src= "img/heartsolid.svg";
+        console.log("if");
+    }else {
+      divHearth.src="img/heart.svg";
+    console.log("Anan");
+  }
+ });
+  favdiv.appendChild(divHearth);
+  li.append(favdiv);
 
   return li
 }
+
 
 /**
  * Add markers for current restaurants to the map.

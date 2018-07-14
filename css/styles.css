@@ -404,6 +404,10 @@ nav h1 a {
     animation-name: animatetop;
     animation-duration: 0.4s;
 }
+.fav-icon{
+  height: 25px;
+  width: 25px;
+}
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: #4CAF50;
