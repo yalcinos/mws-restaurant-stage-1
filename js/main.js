@@ -3,7 +3,7 @@ let restaurants,
   cuisines
 var newMap
 var markers = []
-
+let countFav = 1;
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -194,13 +194,16 @@ createRestaurantHTML = (restaurant) => {
   divHearth.className="fav-icon";
   divHearth.src="img/heart.svg";
   divHearth.align="right";
+  
   divHearth.addEventListener("click", function(){
-    if(divHearth.src="img/heart.svg"){
+    if(countFav == 1){
         divHearth.src= "img/heartsolid.svg";
-        console.log("if");
+        
+        countFav = 0;
+        
     }else {
       divHearth.src="img/heart.svg";
-    console.log("Anan");
+      countFav = 1;
   }
  });
   favdiv.appendChild(divHearth);
