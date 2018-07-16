@@ -209,9 +209,10 @@ createRestaurantHTML = (restaurant) => {
         console.log(isFav);
         for(let i=1; i<=10; i++){
           if(restaurant.id == i){
-            postData(`http://localhost:1337/restaurants/`, {is_favorite:true})
-            .then(data => console.log(data)) // JSON from `response.json()` call
-            .catch(error => console.error(error));
+            fetch('http://localhost:1337/restaurants/'+i+'/?is_favorite=true', {method: 'PUT'})
+            .then(function(response){
+              return response.json();
+            })
 
           }
         }
