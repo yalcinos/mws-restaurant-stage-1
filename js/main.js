@@ -200,6 +200,9 @@ createRestaurantHTML = (restaurant) => {
   //--end 
   divHearth.src="img/heart.svg";
   divHearth.align="right";
+  //default value of favorite
+  
+    
   
   divHearth.addEventListener("click", function(){
     if(countFav == 1){
@@ -208,17 +211,24 @@ createRestaurantHTML = (restaurant) => {
         console.log(restaurant.id);
         for(let i=1; i<=10; i++){
           if(restaurant.id == i){
-            fetch('http://localhost:1337/restaurants/'+i+'/?is_favorite=true', {method: 'PUT'})
-            .then(function(response){
+              fetch('http://localhost:1337/restaurants/'+i+'/?is_favorite=true', {method: 'PUT'})
+              .then(function(response){
               return response.json();
-            })
-
+              })
           }
         }
         
     }else {
       divHearth.src="img/heart.svg";
       countFav = 1;
+      for(let i=1 ; i<=10; i++){
+        if(restaurant.id == i){
+            fetch('http://localhost:1337/restaurants/'+i+'/?is_favorite=false', {method: 'PUT'})
+            .then(function(response){
+              return response.json();
+              }) 
+        }
+      }
   }
  });
   favdiv.appendChild(divHearth);
