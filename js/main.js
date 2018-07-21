@@ -198,12 +198,15 @@ createRestaurantHTML = (restaurant) => {
   divHearth.setAttribute("id" , ct);
   ct++;
   //--end 
-  divHearth.src="img/heart.svg";
-  divHearth.align="right";
+
   //default value of favorite
-  
-    
-  
+   //get fav-button when site is get up.
+  if(restaurant.is_favorite === "true"){
+    divHearth.src= "img/like.svg";
+  }else
+    divHearth.src="img/heart.svg";
+     divHearth.align="right";
+     
   divHearth.addEventListener("click", function(){
     if(countFav == 1){
         divHearth.src= "img/like.svg";
