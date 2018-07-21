@@ -1,12 +1,13 @@
 import idb from 'idb';
 
 
-  idb.open('restaurant-store', 1, upgradeDB => {
+  const dbPromised = idb.open('restaurant-store', 1, upgradeDB => {
   switch (upgradeDB.oldVersion) {
     case 0:
       upgradeDB.createObjectStore('items', {keyPath:'id'});
   }
-}).then(db => {
+});
+  dbPromised.then(db => {
         fetch("http://localhost:1337/restaurants/")
         .then(function(response){
          return response.json()
@@ -20,5 +21,10 @@ import idb from 'idb';
           }
             return tx.complete && store.getAll();
         });
-}).then(() => console.log("Done!"));
+}).then(result => {console.log("Done!")});
+
+//Get Data from indexDB
+  dbPromised.then(db => {return db.transaction("items")
+                        .objectStore("items").get(2);
+                      }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
 

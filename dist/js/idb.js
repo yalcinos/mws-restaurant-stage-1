@@ -7,12 +7,13 @@ var _idb2 = _interopRequireDefault(_idb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_idb2.default.open('restaurant-store', 1, function (upgradeDB) {
+var dbPromised = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
   switch (upgradeDB.oldVersion) {
     case 0:
       upgradeDB.createObjectStore('items', { keyPath: 'id' });
   }
-}).then(function (db) {
+});
+dbPromised.then(function (db) {
   fetch("http://localhost:1337/restaurants/").then(function (response) {
     return response.json();
   }).then(function (jsonData) {
@@ -24,8 +25,15 @@ _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
     }
     return tx.complete && store.getAll();
   });
-}).then(function () {
-  return console.log("Done!");
+}).then(function (result) {
+  console.log("Done!");
+});
+
+//Get Data from indexDB
+dbPromised.then(function (db) {
+  return db.transaction("items").objectStore("items").get(2);
+}).then(function (obj) {
+  return console.log(obj.name, obj.is_favorite, obj.neighborhood);
 });
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
