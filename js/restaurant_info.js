@@ -166,6 +166,8 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 /**
  * Create all reviews HTML and add them to the webpage.
  */
+
+ //BUARADAN DEVAM
 fillReviewsHTML = (review = self.restaurant.review) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
