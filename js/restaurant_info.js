@@ -70,6 +70,7 @@ fetchRestaurantFromURL = (callback) => {
 fetchReviewsFromURL = (callback) => {
   if (self.review) { // restaurant already fetched!
     callback(null, self.review);
+    console.log("asdsad");
     return;
   }
   const id = getParameterByName('id');
@@ -82,7 +83,7 @@ fetchReviewsFromURL = (callback) => {
         if(!review){
           console.error(error);
           return;
-        }
+        }else
         fillReviewsHTML();
         callback(null,review);
       });
@@ -167,14 +168,16 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  * Create all reviews HTML and add them to the webpage.
  */
 
- //BUARADAN DEVAM
-fillReviewsHTML = (review = self.restaurant.review) => {
+ //BUARADAN DEVAM- sıkıntı review değişkenine self.restaurant.review dediğimde veri gitmiyor ?
+fillReviewsHTML = (review = self.restaurant) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   const reviewButton = document.createElement('button');
   const modal = document.getElementById('myModal');
   const span = document.getElementsByClassName("close")[0];
   const restidInput = document.getElementById('resid');
+  //
+  console.log("bayrak:" , review);
   // When the user clicks the button, open the modal 
 reviewButton.onclick = function() {
     modal.style.display = "block";
