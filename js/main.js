@@ -203,9 +203,11 @@ createRestaurantHTML = (restaurant) => {
    //get fav-button when site is get up.
   if(restaurant.is_favorite === "true"){
     divHearth.src= "img/like.svg";
+    divHearth.alt="Favorite-Button";
   }else
     divHearth.src="img/heart.svg";
      divHearth.align="right";
+     divHearth.alt="Favorite-Button";
      
   divHearth.addEventListener("click", function(){
     if(countFav == 1){
