@@ -133,6 +133,7 @@ resetRestaurants = (restaurants) => {
  */
 fillRestaurantsHTML = (restaurants = self.restaurants) => {
   const ul = document.getElementById('restaurants-list');
+  console.log(typeof restaurants);
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });

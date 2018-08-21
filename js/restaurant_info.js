@@ -61,7 +61,6 @@ fetchRestaurantFromURL = (callback) => {
       }
       
       fillRestaurantHTML();
-      console.log('aaa');
       callback(null, restaurant)
     });
   }
@@ -70,7 +69,6 @@ fetchRestaurantFromURL = (callback) => {
 fetchReviewsFromURL = (callback) => {
   if (self.review) { // restaurant already fetched!
     callback(null, self.review);
-    console.log("asdsad");
     return;
   }
   const id = getParameterByName('id');
@@ -169,7 +167,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 
  //BUARADAN DEVAM- sıkıntı review değişkenine self.restaurant.review dediğimde veri gitmiyor ?
-fillReviewsHTML = (review = self.restaurant) => {
+fillReviewsHTML = (reviews = self.review) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   const reviewButton = document.createElement('button');
@@ -177,7 +175,7 @@ fillReviewsHTML = (review = self.restaurant) => {
   const span = document.getElementsByClassName("close")[0];
   const restidInput = document.getElementById('resid');
   //
-  console.log("bayrak:" , review);
+  console.log("bayrak:" , reviews);
   // When the user clicks the button, open the modal 
 reviewButton.onclick = function() {
     modal.style.display = "block";
@@ -201,14 +199,15 @@ window.onclick = function(event) {
   container.appendChild(title);
   container.appendChild(reviewButton);
 
-  if (!review) {
+  if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
     container.appendChild(noReviews);
     return;
   }
   const ul = document.getElementById('reviews-list');
-  review.forEach(review => {
+  console.log(typeof reviews);
+  reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
   container.appendChild(ul);

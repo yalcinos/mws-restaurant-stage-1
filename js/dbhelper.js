@@ -19,13 +19,14 @@ class DBHelper {
     }
 
    static fetchReviews(callback) {
-      fetch("http://localhost:1337/reviews/?restaurant_id=1")
+      fetch("http://localhost:1337/reviews")
       .then(function(response){
          return response.json();
       })
       .then(function(response){
+        console.log('Review:' ,response);
         callback(null,response);
-        console.log('Review:',response);
+        
       })
     }
 
@@ -36,8 +37,9 @@ static fetchReviewsByRestaurantId(id, callback) {
         callback(error, null);
       } else {
 
-        const review = reviews.find(r => r.id == id);
+        const review = reviews.find(r => r.restaurant_id == id);
         if (review) { // Got the restaurant
+          console.log('comment:', review);
           callback(null, review);
         } else { // Restaurant does not exist in the database
           callback('Review does not exist', null);
@@ -53,6 +55,7 @@ static fetchReviewsByRestaurantId(id, callback) {
       } else {
         const restaurant = restaurants.find(r => r.id == id);
         if (restaurant) { // Got the restaurant
+          console.log('Rest:',restaurant);  
           callback(null, restaurant);
         } else { // Restaurant does not exist in the database
           callback('Restaurant does not exist', null);
