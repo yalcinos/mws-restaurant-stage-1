@@ -207,10 +207,10 @@ window.onclick = function(event) {
   }
   const ul = document.getElementById('reviews-list');
   console.log(typeof reviews);
-  //reviews.forEach(review => {
-   // ul.appendChild(createReviewHTML(review));
-  //});
-  ul.appendChild(createReviewHTML(reviews));
+  reviews.forEach(review => {
+    ul.appendChild(createReviewHTML(review));
+  });
+  //ul.appendChild(createReviewHTML(reviews));
   container.appendChild(ul);
 }
 

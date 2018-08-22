@@ -37,7 +37,9 @@ static fetchReviewsByRestaurantId(id, callback) {
         callback(error, null);
       } else {
         //find metodu arrayde ilk elemanı cagırıyor.Benim restaurant id si 1 olanın bütün elemanlarını getirmem lazım.
-        const review = reviews.find(r => r.restaurant_id == id);
+        //const review = reviews.find(r => r.restaurant_id == id);
+        const review = reviews.filter(res => res.restaurant_id == getParameterByName('id'));
+        console.log('yorumlar:' ,review);
         if (review) { // Got the restaurant
           console.log('comment:', review);
           callback(null, review);
