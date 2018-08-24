@@ -46,3 +46,11 @@ gulp.task('transfer',function(){
 	.pipe(browserify())
 	.pipe(gulp.dest('dist/js'))
 })
+gulp.task('transfer-rest',function(){
+	gulp.src('js/idb-restaurant.js')
+	.pipe(babel({
+		presets:["es2015"]
+	}))
+	.pipe(browserify())
+	.pipe(gulp.dest('dist/js'))
+})

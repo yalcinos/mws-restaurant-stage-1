@@ -12,10 +12,11 @@ if ('serviceWorker' in navigator) {
 }
 
 var staticCacheName='restaurant-v1';
-
+//var id =getParameterByName('id');
 self.addEventListener('install',function(event){
 
 //distler eklendi.
+
 
 	var urlsToCache=[
 		'/',
@@ -27,7 +28,8 @@ self.addEventListener('install',function(event){
 		'images',
 		'dist/js/mainpage.min.js',
 		'dist/js/rest-page.min.js',
-		'dist/js/idb.js'
+		'dist/js/idb.js',
+		'dist/js/idb-restaurant.js'
 	];
 	
 	event.waitUntil(
@@ -49,6 +51,7 @@ self.addEventListener('fetch',function(event){
 
 self.addEventListener('activate',function(event){
 	event.waitUntil(
+		Deneme()
 			//get all cache name that exist.
 			caches.keys().then(function(cacheNames){
 
