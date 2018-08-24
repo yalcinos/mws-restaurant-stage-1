@@ -37,6 +37,15 @@ dbPromised.then(function (db) {
 });
 //boyle yapılacak
 //then(obj => console.log(fillRestaurantsHTML(obj)));
+
+//Post data to page when user offline.
+dbPromised.then(function (db) {
+  var tx = db.transaction("items", "readonly");
+  var store = tx.objectStore("items");
+  return store.getAll();
+}).then(function (data) {
+  fillRestaurantsHTML(data);
+});
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
 

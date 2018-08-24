@@ -35,6 +35,8 @@ self.addEventListener('install',function(event){
 				return cache.addAll(urlsToCache);
 			})
 		)
+
+
 });
 self.addEventListener('fetch',function(event){
 	event.respondWith(
@@ -49,6 +51,7 @@ self.addEventListener('activate',function(event){
 	event.waitUntil(
 			//get all cache name that exist.
 			caches.keys().then(function(cacheNames){
+
 				return Promise.all(
 						 cacheNames.filter(function(cacheName){
 					return cacheName.startsWith('restaurant-') && cacheName != staticCacheName;
@@ -58,6 +61,7 @@ self.addEventListener('activate',function(event){
 			);
 				
 		})
+			
 	);
 });
 
