@@ -51,7 +51,7 @@ self.addEventListener('fetch',function(event){
 
 self.addEventListener('activate',function(event){
 	event.waitUntil(
-		Deneme()
+		
 			//get all cache name that exist.
 			caches.keys().then(function(cacheNames){
 
@@ -66,6 +66,7 @@ self.addEventListener('activate',function(event){
 		})
 			
 	);
+
 });
 
 

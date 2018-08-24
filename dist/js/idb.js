@@ -7,47 +7,45 @@ var _idb2 = _interopRequireDefault(_idb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Deneme() {
-  var dbPromised = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
-    switch (upgradeDB.oldVersion) {
-      case 0:
-        upgradeDB.createObjectStore('items', { keyPath: 'id' });
-    }
-  });
-  dbPromised.then(function (db) {
-    fetch("http://localhost:1337/restaurants/").then(function (response) {
-      return response.json();
-    }).then(function (jsonData) {
-      var tx = db.transaction("items", "readwrite");
-      var store = tx.objectStore("items");
-      console.log(jsonData);
-      for (var i = 0; i < jsonData.length; i++) {
-        store.put(jsonData[i]);
-      }
-      return tx.complete && store.getAll();
-    });
-  }).then(function (result) {
-    console.log("Done!");
-  });
-
-  //Get Data from indexDB
-  dbPromised.then(function (db) {
-    return db.transaction("items").objectStore("items").get(1);
-  }).then(function (obj) {
-    return console.log(obj.name, obj.is_favorite, obj.neighborhood);
-  });
-  //boyle yapılacak
-  //then(obj => console.log(fillRestaurantsHTML(obj)));
-
-  //Post data to page when user offline.
-  dbPromised.then(function (db) {
-    var tx = db.transaction("items", "readonly");
+var dbPromised = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('items', { keyPath: 'id' });
+  }
+});
+dbPromised.then(function (db) {
+  fetch("http://localhost:1337/restaurants/").then(function (response) {
+    return response.json();
+  }).then(function (jsonData) {
+    var tx = db.transaction("items", "readwrite");
     var store = tx.objectStore("items");
-    return store.getAll();
-  }).then(function (data) {
-    fillRestaurantsHTML(data);
+    console.log(jsonData);
+    for (var i = 0; i < jsonData.length; i++) {
+      store.put(jsonData[i]);
+    }
+    return tx.complete && store.getAll();
   });
-}
+}).then(function (result) {
+  console.log("Done!");
+});
+
+//Get Data from indexDB
+dbPromised.then(function (db) {
+  return db.transaction("items").objectStore("items").get(1);
+}).then(function (obj) {
+  return console.log(obj.name, obj.is_favorite, obj.neighborhood);
+});
+//boyle yapılacak
+//then(obj => console.log(fillRestaurantsHTML(obj)));
+
+//Post data to page when user offline.
+dbPromised.then(function (db) {
+  var tx = db.transaction("items", "readonly");
+  var store = tx.objectStore("items");
+  return store.getAll();
+}).then(function (data) {
+  fillRestaurantsHTML(data);
+});
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
 

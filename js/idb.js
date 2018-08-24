@@ -1,6 +1,6 @@
 import idb from 'idb';
 
-function Deneme(){
+
   const dbPromised = idb.open('restaurant-store', 1, upgradeDB => {
   switch (upgradeDB.oldVersion) {
     case 0:
@@ -37,4 +37,3 @@ function Deneme(){
     return store.getAll();
   
   }).then(data => {fillRestaurantsHTML(data)});
-}
