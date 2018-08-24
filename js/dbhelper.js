@@ -38,7 +38,7 @@ static fetchReviewsByRestaurantId(id, callback) {
       } else {
         //find metodu arrayde ilk elemanı cagırıyor.Benim restaurant id si 1 olanın bütün elemanlarını getirmem lazım.
         //const review = reviews.find(r => r.restaurant_id == id);
-        const review = reviews.filter(res => res.restaurant_id == getParameterByName('id'));
+        const review = reviews.filter(res => parseInt(res.restaurant_id) == getParameterByName('id'));
         console.log('yorumlar:' ,review);
         if (review) { // Got the restaurant
           console.log('comment:', review);
@@ -54,15 +54,34 @@ static fetchReviewsByRestaurantId(id, callback) {
     const uname = document.getElementById("uname").value;
     const rate = document.getElementById("rate").value;
     const comment = document.getElementById("subject").value;
-
+   
     const reviewData = {
       "restarant_id": rest_id,
       "name": uname,
       "rating": rate,
       "comments": comment
     }
-    alert(rest_id+","+uname+","+rate+","+comment);
-    
+    //alert(rest_id+","+uname+","+rate+","+comment);
+    fetch('http://localhost:1337/reviews', {
+    method: 'POST',
+    mode: "cors", // no-cors, cors, *same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, same-origin, *omit
+    body: JSON.stringify(reviewData),
+    redirect: "follow", // manual, *follow, error
+    referrer: "no-referrer", // no-referrer, *client
+    headers: {
+        'content-type': 'application/json; charset=utf-8',
+      }
+    }).then(response => response.json())
+      .then(response => {
+  
+        console.log('PostedData:',response);
+      })
+      .catch(error => {
+        console.log(error);
+    });
+      event.preventDefault();
   }
   static fetchRestaurantById(id, callback) {
     // fetch all restaurants with proper error handling.

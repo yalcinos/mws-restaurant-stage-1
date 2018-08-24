@@ -25,6 +25,9 @@ import idb from 'idb';
 
 //Get Data from indexDB
   dbPromised.then(db => {return db.transaction("items")
-                        .objectStore("items").get(2);
+                        .objectStore("items").get(1);
                       }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
+  //boyle yapılacak
+  //then(obj => console.log(fillRestaurantsHTML(obj)));
+
 

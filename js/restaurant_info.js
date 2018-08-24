@@ -259,6 +259,12 @@ createReviewHTML = (review) => {
 
   return li;
 }
+const rewButton = document.getElementById("submitReview");
+ rewButton.addEventListener("click",function(){
+    event.preventDefault();
+      DBHelper.PostReviewData();
+       
+    })
 
 /**
  * Add restaurant name to the breadcrumb navigation menu

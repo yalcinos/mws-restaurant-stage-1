@@ -136,6 +136,8 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     ul.append(createRestaurantHTML(restaurant));
   });
+  //indexDB cursor ile bütün datalar cekilecek ve forEach yapılacak.
+  //ul.append(createRestaurantHTML(restaurants));
   addMarkersToMap();
 }
 

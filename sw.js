@@ -15,16 +15,19 @@ var staticCacheName='restaurant-v1';
 
 self.addEventListener('install',function(event){
 
+//distler eklendi.
 
 	var urlsToCache=[
 		'/',
 		'js/dbhelper.js',
 		'js/main.js',
 		'js/restaurant_info.js',
-		'http://localhost:1337/restaurants/',
 		'css/styles.css',
 		'img',
-		'images'
+		'images',
+		'dist/js/mainpage.min.js',
+		'dist/js/rest-page.min.js',
+		'dist/js/idb.js'
 	];
 	
 	event.waitUntil(

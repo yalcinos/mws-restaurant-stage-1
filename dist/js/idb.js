@@ -31,10 +31,12 @@ dbPromised.then(function (db) {
 
 //Get Data from indexDB
 dbPromised.then(function (db) {
-  return db.transaction("items").objectStore("items").get(2);
+  return db.transaction("items").objectStore("items").get(1);
 }).then(function (obj) {
   return console.log(obj.name, obj.is_favorite, obj.neighborhood);
 });
+//boyle yapılacak
+//then(obj => console.log(fillRestaurantsHTML(obj)));
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
 
