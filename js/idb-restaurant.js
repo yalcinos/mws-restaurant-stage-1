@@ -36,4 +36,7 @@ import idb from 'idb';
     var store = tx.objectStore("reviews");
     return store.getAll();
   
-  }).then(data => {console.log(data)});
+  }).then(data => {const ul = document.getElementById('reviews-list');
+  data.forEach(review => {
+    ul.appendChild(createReviewHTML(review));
+  })});

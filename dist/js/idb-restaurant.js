@@ -44,7 +44,10 @@ dbPromised.then(function (db) {
   var store = tx.objectStore("reviews");
   return store.getAll();
 }).then(function (data) {
-  console.log(data);
+  var ul = document.getElementById('reviews-list');
+  data.forEach(function (review) {
+    ul.appendChild(createReviewHTML(review));
+  });
 });
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';

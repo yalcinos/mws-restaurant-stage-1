@@ -192,7 +192,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-  restidInput.value = self.restaurant.id;
+  restidInput.value = self.review.id;
   reviewButton.id = 'reviews-button';
   reviewButton.innerHTML = 'Add Review';
   title.innerHTML = 'Reviews';

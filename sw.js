@@ -25,6 +25,7 @@ self.addEventListener('install',function(event){
 		'js/restaurant_info.js',
 		'css/styles.css',
 		'img',
+		'restaurant.html',
 		'images',
 		'dist/js/mainpage.min.js',
 		'dist/js/rest-page.min.js',
@@ -42,7 +43,7 @@ self.addEventListener('install',function(event){
 });
 self.addEventListener('fetch',function(event){
 	event.respondWith(
-		caches.match(event.request).then(function(response){
+		caches.match(event.request,{ignoreSearch:true}).then(function(response){
 			return response || fetch(event.request);
 		})
 	);
