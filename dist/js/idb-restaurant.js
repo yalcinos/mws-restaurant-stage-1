@@ -35,20 +35,44 @@ dbPromised.then(function (db) {
 }).then(function (obj) {
   return console.log(obj.name, obj.is_favorite, obj.neighborhood);
 });
-//boyle yapılacak
-//then(obj => console.log(fillRestaurantsHTML(obj)));
 
-//Post data to page when user offline.
-dbPromised.then(function (db) {
-  var tx = db.transaction("reviews", "readonly");
-  var store = tx.objectStore("reviews");
-  return store.getAll();
-}).then(function (data) {
-  var ul = document.getElementById('reviews-list');
-  data.forEach(function (review) {
-    ul.appendChild(createReviewHTML(review));
+//When user offline,get data from indexDB for offline usage.
+if (window.navigator.onLine) {
+  console.log('online!');
+} else {
+  console.log('offline');
+  //Post data to page when user offline.
+  dbPromised.then(function (db) {
+    var tx = db.transaction("reviews", "readonly");
+    var store = tx.objectStore("reviews");
+    return store.getAll();
+  }).then(function (data) {
+    var reviewForRest = data.filter(function (res) {
+      return parseInt(res.restaurant_id) == getParameterByName('id');
+    });
+    var ul = document.getElementById('reviews-list');
+    console.log('indsad:', reviewForRest);
+    reviewForRest.forEach(function (review) {
+      ul.appendChild(createReviewHTML(review));
+    });
   });
-});
+}
+//Get idb for restaurant details of restaurant_info page
+function Deneme() {
+  var dbPromisedRestaurantDetail = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
+    switch (upgradeDB.oldVersion) {
+      case 0:
+        upgradeDB.createObjectStore('items', { keyPath: 'id' });
+    }
+  });
+  dbPromisedRestaurantDetail.then(function (db) {
+    var tx = db.transaction("items", "readonly");
+    var store = tx.objectStore("items");
+    return store.getAll();
+  }).then(function (data) {
+    fillRestaurantHTML(data);
+  });
+}
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
 

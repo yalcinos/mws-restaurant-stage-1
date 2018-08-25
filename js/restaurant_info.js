@@ -96,7 +96,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   "An Image of Roberta's Pizza Restaurant","An Image of Hometown BBQ Restaurant",
   "An Image of ImaSuperiority Burger Restaurant","An Image of The Dutch Restaurant","An Image of Mu Ramen Restaurant",
   "An Image of Casa Enrique Restaurant"];
-
+  console.log('TRTR:', restaurant);
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
   const address = document.getElementById('restaurant-address');

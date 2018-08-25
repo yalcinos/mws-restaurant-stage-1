@@ -30,11 +30,15 @@ import idb from 'idb';
   //boyle yapılacak
   //then(obj => console.log(fillRestaurantsHTML(obj)));
 
-//Post data to page when user offline.
+//Post indexed data to page when user offline.
+if(window.navigator.onLine){
+  console.log('Online!');
+}else{
   dbPromised.then(db =>{
     var tx = db.transaction("items","readonly");
     var store = tx.objectStore("items");
     return store.getAll();
   
   }).then(data => {fillRestaurantsHTML(data)});
+}
 

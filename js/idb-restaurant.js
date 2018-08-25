@@ -27,16 +27,39 @@ import idb from 'idb';
   dbPromised.then(db => {return db.transaction("reviews")
                         .objectStore("reviews").get(1);
                       }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
-  //boyle yapılacak
-  //then(obj => console.log(fillRestaurantsHTML(obj)));
 
+//When user offline,get data from indexDB for offline usage.
+if(window.navigator.onLine){
+  console.log('online!');
+}else{
+  console.log('offline');
 //Post data to page when user offline.
   dbPromised.then(db =>{
     var tx = db.transaction("reviews","readonly");
     var store = tx.objectStore("reviews");
     return store.getAll();
   
-  }).then(data => {const ul = document.getElementById('reviews-list');
-  data.forEach(review => {
+  }).then(data => {
+    const reviewForRest = data.filter(res => parseInt(res.restaurant_id) == getParameterByName('id'));
+    const ul = document.getElementById('reviews-list');
+    console.log('indsad:' ,reviewForRest);
+    reviewForRest.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   })});
+}
+//Get idb for restaurant details of restaurant_info page
+function Deneme(){
+  const dbPromisedRestaurantDetail = idb.open('restaurant-store', 1, upgradeDB => {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('items', {keyPath:'id'});
+  }
+});
+  dbPromisedRestaurantDetail.then(db =>{
+    var tx = db.transaction("items","readonly");
+    var store = tx.objectStore("items");
+    return store.getAll();
+  
+  }).then(data => {fillRestaurantHTML(data)});
+}
+
