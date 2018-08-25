@@ -37,3 +37,4 @@ import idb from 'idb';
     return store.getAll();
   
   }).then(data => {fillRestaurantsHTML(data)});
+

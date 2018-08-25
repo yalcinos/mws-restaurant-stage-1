@@ -25,6 +25,7 @@ self.addEventListener('install',function(event){
 		'js/restaurant_info.js',
 		'css/styles.css',
 		'img',
+		'sw.js',
 		'restaurant.html',
 		'images',
 		'dist/js/mainpage.min.js',
@@ -68,6 +69,7 @@ self.addEventListener('activate',function(event){
 			
 	);
 
+	
 });
 
 
