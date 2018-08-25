@@ -57,8 +57,16 @@ if (window.navigator.onLine) {
     });
   });
 }
+/////////////////////////////////////////7
+
+
+//////////////////////////////////////////
+
 //Get idb for restaurant details of restaurant_info page
-function Deneme() {
+if (window.navigator.onLine) {
+  console.log('online!');
+} else {
+  console.log('offline');
   var dbPromisedRestaurantDetail = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
     switch (upgradeDB.oldVersion) {
       case 0:
@@ -70,7 +78,15 @@ function Deneme() {
     var store = tx.objectStore("items");
     return store.getAll();
   }).then(function (data) {
-    fillRestaurantHTML(data);
+    var opHours = {};
+    var IndexedRestData = data.find(function (res) {
+      return parseInt(res.id) == getParameterByName('id');
+    });
+    console.log('ABD:', IndexedRestData);
+    fillRestaurantHTML(IndexedRestData);
+    opHours = IndexedRestData.operating_hours;
+    console.log('XCVB:', opHours);
+    fillRestaurantHoursHTML(opHours);
   });
 }
 },{"idb":2}],2:[function(require,module,exports){

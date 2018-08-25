@@ -27,8 +27,7 @@ import idb from 'idb';
   dbPromised.then(db => {return db.transaction("items")
                         .objectStore("items").get(1);
                       }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
-  //boyle yapılacak
-  //then(obj => console.log(fillRestaurantsHTML(obj)));
+
 
 //Post indexed data to page when user offline.
 if(window.navigator.onLine){

@@ -28,9 +28,11 @@ import idb from 'idb';
                         .objectStore("reviews").get(1);
                       }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
 
+
 //When user offline,get data from indexDB for offline usage.
 if(window.navigator.onLine){
   console.log('online!');
+
 }else{
   console.log('offline');
 //Post data to page when user offline.
@@ -46,9 +48,20 @@ if(window.navigator.onLine){
     reviewForRest.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   })});
+
+ 
 }
+/////////////////////////////////////////7
+
+
+//////////////////////////////////////////
+
 //Get idb for restaurant details of restaurant_info page
-function Deneme(){
+if(window.navigator.onLine){
+  console.log('online!');
+
+}else{
+  console.log('offline');
   const dbPromisedRestaurantDetail = idb.open('restaurant-store', 1, upgradeDB => {
   switch (upgradeDB.oldVersion) {
     case 0:
@@ -60,6 +73,15 @@ function Deneme(){
     var store = tx.objectStore("items");
     return store.getAll();
   
-  }).then(data => {fillRestaurantHTML(data)});
+  }).then(data => {
+    let opHours ={};
+    const IndexedRestData = data.find(res => parseInt(res.id) == getParameterByName('id'));
+    console.log('ABD:', IndexedRestData);
+    fillRestaurantHTML(IndexedRestData);
+    opHours = IndexedRestData.operating_hours;
+    console.log('XCVB:', opHours);
+   fillRestaurantHoursHTML(opHours);
+  });
+  
 }
 
