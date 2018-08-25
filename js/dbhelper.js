@@ -36,12 +36,10 @@ static fetchReviewsByRestaurantId(id, callback) {
       if (error) {
         callback(error, null);
       } else {
-        //find metodu arrayde ilk elemanı cagırıyor.Benim restaurant id si 1 olanın bütün elemanlarını getirmem lazım.
-        //const review = reviews.find(r => r.restaurant_id == id);
-        const review = reviews.filter(res => parseInt(res.restaurant_id) == getParameterByName('id'));
+        //Yeni gelen yorumlar filter olmuyor.
+        let review = reviews.filter(res => res.restaurant_id == getParameterByName('id'));
         console.log('yorumlar:' ,review);
         if (review) { // Got the restaurant
-          console.log('comment:', review);
           callback(null, review);
         } else { // Restaurant does not exist in the database
           callback('Review does not exist', null);
@@ -50,11 +48,12 @@ static fetchReviewsByRestaurantId(id, callback) {
     });
   }
   static PostReviewData(){
-    const rest_id = getParameterByName('id');
+    const rest_id = parseInt(getParameterByName('id'));
     const uname = document.getElementById("uname").value;
-    const rate = document.getElementById("rate").value;
+    const rate = parseInt(document.getElementById("rate").value);
     const comment = document.getElementById("subject").value;
-   
+   console.log('şş:',rest_id);
+   console.log('ş:', rate);
     const reviewData = {
       "restarant_id": rest_id,
       "name": uname,
@@ -62,7 +61,7 @@ static fetchReviewsByRestaurantId(id, callback) {
       "comments": comment
     }
     //alert(rest_id+","+uname+","+rate+","+comment);
-    fetch('http://localhost:1337/reviews', {
+    fetch('http://localhost:1337/reviews/?restaurant_id='+rest_id, {
     method: 'POST',
     mode: "cors", // no-cors, cors, *same-origin
     cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
