@@ -74,13 +74,12 @@ if(window.navigator.onLine){
     return store.getAll();
   
   }).then(data => {
-    let opHours ={};
     const IndexedRestData = data.find(res => parseInt(res.id) == getParameterByName('id'));
     console.log('ABD:', IndexedRestData);
     fillRestaurantHTML(IndexedRestData);
-    opHours = IndexedRestData.operating_hours;
-    console.log('XCVB:', opHours);
-   fillRestaurantHoursHTML(opHours);
+    const opHours = IndexedRestData.name;
+    console.log('XCVB:',opHours);
+    //fillRestaurantHoursHTML(opHours);
   });
   
 }

@@ -78,15 +78,14 @@ if (window.navigator.onLine) {
     var store = tx.objectStore("items");
     return store.getAll();
   }).then(function (data) {
-    var opHours = {};
     var IndexedRestData = data.find(function (res) {
       return parseInt(res.id) == getParameterByName('id');
     });
     console.log('ABD:', IndexedRestData);
     fillRestaurantHTML(IndexedRestData);
-    opHours = IndexedRestData.operating_hours;
+    var opHours = IndexedRestData.name;
     console.log('XCVB:', opHours);
-    fillRestaurantHoursHTML(opHours);
+    //fillRestaurantHoursHTML(opHours);
   });
 }
 },{"idb":2}],2:[function(require,module,exports){

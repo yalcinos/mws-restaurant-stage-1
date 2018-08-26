@@ -515,6 +515,9 @@ For mobile devices
     left: 14px;
     top:  11px;
   }
+  #reviews-button{
+    left: 50%;
+  }
  
 }
 /**

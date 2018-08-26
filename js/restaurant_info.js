@@ -135,6 +135,7 @@ const source2=document.createElement("source");
 
   // fill operating hours
   if (restaurant.operating_hours) {
+    console.log('Star:', restaurant.operating_hours);
     fillRestaurantHoursHTML();
   }
 }
