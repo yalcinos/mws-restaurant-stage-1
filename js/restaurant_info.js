@@ -262,7 +262,8 @@ createReviewHTML = (review) => {
 }
 const rewButton = document.getElementById("submitReview");
  rewButton.addEventListener("click",function(){
-    event.preventDefault();
+    //event.preventDefault();
+    location.href="http://localhost:8000/restaurant.html?id="+getParameterByName('id');
       DBHelper.PostReviewData();
        
     })
