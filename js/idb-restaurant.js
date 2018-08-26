@@ -45,9 +45,7 @@ if(window.navigator.onLine){
     const reviewForRest = data.filter(res => parseInt(res.restaurant_id) == getParameterByName('id'));
     const ul = document.getElementById('reviews-list');
     console.log('indsad:' ,reviewForRest);
-    reviewForRest.forEach(review => {
-    ul.appendChild(createReviewHTML(review));
-  })});
+      fillReviewsHTML(reviewForRest)});
 
  
 }
@@ -79,7 +77,7 @@ if(window.navigator.onLine){
     fillRestaurantHTML(IndexedRestData);
     const opHours = IndexedRestData.name;
     console.log('XCVB:',opHours);
-    //fillRestaurantHoursHTML(opHours);
+   //fillRestaurantHoursHTML(opHours);
   });
   
 }

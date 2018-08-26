@@ -194,6 +194,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
@@ -274,13 +275,14 @@ nav h1 a {
   border-radius: 10px;
   text-align: center;
 }
+
 #reviews-container {
   width: 50%;
   padding: 30px 20px 80px 15px;
 }
 #reviews-container h2 {
   color: #f58500;
-  font-size: 24pt;
+  font-size: 19pt;
   font-weight: 300;
   margin-right: 45%;
   letter-spacing: -1px;
@@ -559,6 +561,12 @@ For mobile and tablet PCs
     display: block;
     width: 100%;
   }
+  .modal-header{
+    margin-right: 35%;
+  }
+
+
+
 }
 /**For converting css from mobile to destop and tablet.
 *Change UI to desktop users.The map position changes from horizontal to vertical.

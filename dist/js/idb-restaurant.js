@@ -52,9 +52,7 @@ if (window.navigator.onLine) {
     });
     var ul = document.getElementById('reviews-list');
     console.log('indsad:', reviewForRest);
-    reviewForRest.forEach(function (review) {
-      ul.appendChild(createReviewHTML(review));
-    });
+    fillReviewsHTML(reviewForRest);
   });
 }
 /////////////////////////////////////////7
