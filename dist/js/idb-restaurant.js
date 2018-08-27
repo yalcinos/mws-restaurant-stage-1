@@ -13,6 +13,12 @@ var dbPromised = _idb2.default.open('review-store', 1, function (upgradeDB) {
       upgradeDB.createObjectStore('reviews', { keyPath: 'id' });
   }
 });
+var dbPromisedRestaurantDetail = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('items', { keyPath: 'id' });
+  }
+});
 dbPromised.then(function (db) {
   fetch("http://localhost:1337/reviews/").then(function (response) {
     return response.json();
@@ -57,20 +63,32 @@ if (window.navigator.onLine) {
 }
 /////////////////////////////////////////7
 
+//---RESTAURANT-DETAİL----
 
 //////////////////////////////////////////
-
+//add restaurant data when user offline to ındexDB.
 //Get idb for restaurant details of restaurant_info page
 if (window.navigator.onLine) {
   console.log('online!');
-} else {
-  console.log('offline');
-  var dbPromisedRestaurantDetail = _idb2.default.open('restaurant-store', 1, function (upgradeDB) {
-    switch (upgradeDB.oldVersion) {
-      case 0:
-        upgradeDB.createObjectStore('items', { keyPath: 'id' });
-    }
+  dbPromisedRestaurantDetail.then(function (db) {
+    fetch("http://localhost:1337/restaurants/").then(function (response) {
+      return response.json();
+    }).then(function (jsonData) {
+      var tx = db.transaction("items", "readwrite");
+      var store = tx.objectStore("items");
+      console.log(jsonData);
+      for (var i = 0; i < jsonData.length; i++) {
+        store.put(jsonData[i]);
+      }
+      return tx.complete && store.getAll();
+    });
+  }).then(function (result) {
+    console.log("Done!");
   });
+} else {
+  //When user offline get restaurant data from indexDB for use offline.
+  console.log('offline');
+
   dbPromisedRestaurantDetail.then(function (db) {
     var tx = db.transaction("items", "readonly");
     var store = tx.objectStore("items");

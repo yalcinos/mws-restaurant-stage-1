@@ -7,6 +7,13 @@ import idb from 'idb';
       upgradeDB.createObjectStore('reviews', {keyPath:'id'});
   }
 });
+  const dbPromisedRestaurantDetail = idb.open('restaurant-store', 1, upgradeDB => {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('items', {keyPath:'id'});
+      
+  }
+});
   dbPromised.then(db => {
         fetch("http://localhost:1337/reviews/")
         .then(function(response){
@@ -51,21 +58,33 @@ if(window.navigator.onLine){
 }
 /////////////////////////////////////////7
 
+//---RESTAURANT-DETAİL----
 
 //////////////////////////////////////////
-
+//add restaurant data when user offline to ındexDB.
 //Get idb for restaurant details of restaurant_info page
 if(window.navigator.onLine){
   console.log('online!');
+    dbPromisedRestaurantDetail.then(db => {
+        fetch("http://localhost:1337/restaurants/")
+        .then(function(response){
+         return response.json()
+        })
+        .then(function(jsonData){
+          var tx = db.transaction("items", "readwrite");
+          var store = tx.objectStore("items");
+          console.log(jsonData);
+          for(var i=0; i<jsonData.length; i++){
+            store.put(jsonData[i]);
+          }
+            return tx.complete && store.getAll();
+        });
+}).then(result => {console.log("Done!")});
 
 }else{
+  //When user offline get restaurant data from indexDB for use offline.
   console.log('offline');
-  const dbPromisedRestaurantDetail = idb.open('restaurant-store', 1, upgradeDB => {
-  switch (upgradeDB.oldVersion) {
-    case 0:
-      upgradeDB.createObjectStore('items', {keyPath:'id'});
-  }
-});
+
   dbPromisedRestaurantDetail.then(db =>{
     var tx = db.transaction("items","readonly");
     var store = tx.objectStore("items");
