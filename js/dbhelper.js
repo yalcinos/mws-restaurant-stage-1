@@ -82,6 +82,19 @@ static fetchReviewsByRestaurantId(id, callback) {
     });
       event.preventDefault();
   }
+  static OfflinePostReviewData(){
+    const rest_id = parseInt(getParameterByName('id'));
+    const uname = document.getElementById("uname").value;
+    const rate = parseInt(document.getElementById("rate").value);
+    const comment = document.getElementById("subject").value;
+    const reviewData = {
+      "restarant_id": rest_id,
+      "name": uname,
+      "rating": rate,
+      "comments": comment
+    }
+    alert(JSON.stringify(reviewData));
+  }
   static fetchRestaurantById(id, callback) {
     // fetch all restaurants with proper error handling.
     DBHelper.fetchRestaurants((error, restaurants) => {

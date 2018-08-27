@@ -1,6 +1,10 @@
 import idb from 'idb';
 
+///////////////////
 
+//INITIALIZE idp objects
+
+////////////////////
   const dbPromised = idb.open('review-store', 1, upgradeDB => {
   switch (upgradeDB.oldVersion) {
     case 0:
@@ -11,9 +15,24 @@ import idb from 'idb';
   switch (upgradeDB.oldVersion) {
     case 0:
       upgradeDB.createObjectStore('items', {keyPath:'id'});
+
+  }
+});
+  const dbPromisedOutBox = idb.open('outbox', 1, upgradeDB => {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('outitems', {keyPath:'id'});
       
   }
 });
+//END OF INITIALIZE
+
+
+////////////////
+
+//ADD REVIEW DATA TO INDEXDB FOR OFFLINE USAGE
+
+/////////////
   dbPromised.then(db => {
         fetch("http://localhost:1337/reviews/")
         .then(function(response){
@@ -53,8 +72,6 @@ if(window.navigator.onLine){
     const ul = document.getElementById('reviews-list');
     console.log('indsad:' ,reviewForRest);
       fillReviewsHTML(reviewForRest)});
-
- 
 }
 /////////////////////////////////////////7
 
@@ -101,3 +118,15 @@ if(window.navigator.onLine){
   
 }
 
+function AddDataToOutBox(){
+  //ADD REVIEW TO OUTBOTX FOR BACKGROUNDSYNC
+  if(window.navigator.onLine){
+    console.log('fdsdfdsf');
+  }
+  dbPromisedOutBox.then(db =>{
+    var tx = db.transaction("outboxitems","readonly");
+    var store = tx.objectStore("reviews");
+    return store.getAll();
+  
+  }).then(data => {});
+}

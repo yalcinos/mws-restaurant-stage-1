@@ -7,6 +7,11 @@ var _idb2 = _interopRequireDefault(_idb);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+///////////////////
+
+//INITIALIZE idp objects
+
+////////////////////
 var dbPromised = _idb2.default.open('review-store', 1, function (upgradeDB) {
   switch (upgradeDB.oldVersion) {
     case 0:
@@ -17,8 +22,24 @@ var dbPromisedRestaurantDetail = _idb2.default.open('restaurant-store', 1, funct
   switch (upgradeDB.oldVersion) {
     case 0:
       upgradeDB.createObjectStore('items', { keyPath: 'id' });
+
   }
 });
+var dbPromisedOutBox = _idb2.default.open('outbox', 1, function (upgradeDB) {
+  switch (upgradeDB.oldVersion) {
+    case 0:
+      upgradeDB.createObjectStore('outitems', { keyPath: 'id' });
+
+  }
+});
+//END OF INITIALIZE
+
+
+////////////////
+
+//ADD REVIEW DATA TO INDEXDB FOR OFFLINE USAGE
+
+/////////////
 dbPromised.then(function (db) {
   fetch("http://localhost:1337/reviews/").then(function (response) {
     return response.json();
@@ -103,6 +124,18 @@ if (window.navigator.onLine) {
     console.log('XCVB:', opHours);
     //fillRestaurantHoursHTML(opHours);
   });
+}
+
+function AddDataToOutBox() {
+  //ADD REVIEW TO OUTBOTX FOR BACKGROUNDSYNC
+  if (window.navigator.onLine) {
+    console.log('fdsdfdsf');
+  }
+  dbPromisedOutBox.then(function (db) {
+    var tx = db.transaction("outboxitems", "readonly");
+    var store = tx.objectStore("reviews");
+    return store.getAll();
+  }).then(function (data) {});
 }
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
