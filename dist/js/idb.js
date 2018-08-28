@@ -35,8 +35,6 @@ dbPromised.then(function (db) {
 }).then(function (obj) {
   return console.log(obj.name, obj.is_favorite, obj.neighborhood);
 });
-//boyle yapılacak
-//then(obj => console.log(fillRestaurantsHTML(obj)));
 
 //Post indexed data to page when user offline.
 if (window.navigator.onLine) {

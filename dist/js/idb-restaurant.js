@@ -63,7 +63,7 @@ dbPromised.then(function (db) {
   return console.log(obj.name, obj.is_favorite, obj.neighborhood);
 });
 
-//When user offline,get data from indexDB for offline usage.
+//When user offline,get review from indexDB for offline usage.
 if (window.navigator.onLine) {
   console.log('online!');
 } else {
@@ -126,17 +126,11 @@ if (window.navigator.onLine) {
   });
 }
 
-function AddDataToOutBox() {
-  //ADD REVIEW TO OUTBOTX FOR BACKGROUNDSYNC
-  if (window.navigator.onLine) {
-    console.log('fdsdfdsf');
-  }
-  dbPromisedOutBox.then(function (db) {
-    var tx = db.transaction("outboxitems", "readonly");
-    var store = tx.objectStore("reviews");
-    return store.getAll();
-  }).then(function (data) {});
-}
+/////////////////////
+
+////ADD LOCALSTORAGE FOR REVIEW OFFLINE
+
+/////////////////
 },{"idb":2}],2:[function(require,module,exports){
 'use strict';
 

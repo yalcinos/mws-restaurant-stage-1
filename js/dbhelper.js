@@ -1,6 +1,9 @@
+
+
 /**
  * Common database helper functions.
  */
+
 class DBHelper {
 
   /**
@@ -93,7 +96,9 @@ static fetchReviewsByRestaurantId(id, callback) {
       "rating": rate,
       "comments": comment
     }
-    alert(JSON.stringify(reviewData));
+
+     alert(JSON.stringify(reviewData));
+     event.preventDefault();
   }
   static fetchRestaurantById(id, callback) {
     // fetch all restaurants with proper error handling.

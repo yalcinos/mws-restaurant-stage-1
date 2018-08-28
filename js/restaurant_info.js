@@ -266,8 +266,23 @@ const rewButton = document.getElementById("submitReview");
       if(window.navigator.onLine){
         DBHelper.PostReviewData();
       }
-      else 
-        DBHelper.OfflinePostReviewData();
+      else{
+        console.log('net yok');
+        //DBHelper.OfflinePostReviewData();
+      const rest_id = parseInt(getParameterByName('id'));
+      const uname = document.getElementById("uname").value;
+      const rate = parseInt(document.getElementById("rate").value);
+      const comment = document.getElementById("subject").value;
+      const reviewData = {
+      "restarant_id": rest_id,
+      "name": uname,
+      "rating": rate,
+      "comments": comment
+    }
+    var data = JSON.stringify(reviewData);
+      addToLocalStorage(data);
+      event.preventDefault();
+      }
 
       location.href="http://localhost:8000/restaurant.html?id="+getParameterByName('id');
     })
@@ -298,20 +313,31 @@ getParameterByName = (name, url) => {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-
-/** This code is not work.I tried to write code which help to adjust height of the map when user scroll
- *   Probably I should have use "less" or "sass" for this code but now this is not our topic.
-
-setInterval(function(){
-  var scrollPosition=document.documentElement;
-  var scrollT=scrollPosition.scrollTop
-  //this 65 is footer height because 
-  if(scrollT=(scrollT-65)){
-  $('#map-container').css("height","78%");
-  }else{
-  $('#map-container').css("height","90%");
-  }
-},100)
-*/
-
-
+addToLocalStorage = (reviewData) =>{
+    const rest_id = parseInt(getParameterByName('id'));
+    localStorage.setItem("reviewData",reviewData);
+}
+      window.addEventListener("online",(event)=>{
+        console.log('YUPPPPPPI');
+    const rest_id = parseInt(getParameterByName('id'));
+    let reviewDataFromLS = JSON.parse(localStorage.getItem("reviewData"));
+    fetch('http://localhost:1337/reviews/?restaurant_id='+rest_id, {
+    method: 'POST',
+    mode: "cors", // no-cors, cors, *same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, same-origin, *omit
+    body: JSON.stringify(reviewDataFromLS),
+    redirect: "follow", // manual, *follow, error
+    referrer: "no-referrer", // no-referrer, *client
+    headers: {
+        'content-type': 'application/json; charset=utf-8',
+      }
+    }).then(response => response.json())
+      .then(response => {
+  
+        console.log('OLDUBITTI:',response);
+      })
+      .catch(error => {
+        console.log(error);
+    });
+  });

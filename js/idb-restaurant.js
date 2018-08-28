@@ -55,7 +55,7 @@ import idb from 'idb';
                       }).then(obj => console.log(obj.name,obj.is_favorite,obj.neighborhood));
 
 
-//When user offline,get data from indexDB for offline usage.
+//When user offline,get review from indexDB for offline usage.
 if(window.navigator.onLine){
   console.log('online!');
 
@@ -118,15 +118,8 @@ if(window.navigator.onLine){
   
 }
 
-function AddDataToOutBox(){
-  //ADD REVIEW TO OUTBOTX FOR BACKGROUNDSYNC
-  if(window.navigator.onLine){
-    console.log('fdsdfdsf');
-  }
-  dbPromisedOutBox.then(db =>{
-    var tx = db.transaction("outboxitems","readonly");
-    var store = tx.objectStore("reviews");
-    return store.getAll();
-  
-  }).then(data => {});
-}
+/////////////////////
+
+////ADD LOCALSTORAGE FOR REVIEW OFFLINE
+
+/////////////////
