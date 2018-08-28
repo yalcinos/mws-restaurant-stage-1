@@ -313,12 +313,19 @@ getParameterByName = (name, url) => {
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+//Add review to Local Storage.
 addToLocalStorage = (reviewData) =>{
     const rest_id = parseInt(getParameterByName('id'));
     localStorage.setItem("reviewData",reviewData);
 }
-      window.addEventListener("online",(event)=>{
-        console.log('YUPPPPPPI');
+
+//Prevent duplicate data issue when user try to reconnect multiple time.
+removeLocalStorageData = () => {
+  localStorage.removeItem("reviewData");
+}
+
+//When user is online.Fetch data from localstorage to server and delete localstorage.
+window.addEventListener("online",(event)=>{
     const rest_id = parseInt(getParameterByName('id'));
     let reviewDataFromLS = JSON.parse(localStorage.getItem("reviewData"));
     fetch('http://localhost:1337/reviews/?restaurant_id='+rest_id, {
@@ -335,7 +342,8 @@ addToLocalStorage = (reviewData) =>{
     }).then(response => response.json())
       .then(response => {
   
-        console.log('OLDUBITTI:',response);
+        console.log('LocalStorageData:',response);
+        removeLocalStorageData();
       })
       .catch(error => {
         console.log(error);
