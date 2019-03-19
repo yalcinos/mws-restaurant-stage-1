@@ -19,13 +19,11 @@ For the **Restaurant Reviews** projects, you will incrementally convert a static
 1. When I download code again,I realized that there is an issue at server api.
 2. Before that I couldn't add a review to page same as you. So I realized that you should set defaultLimit ="60" on server.
 Because When I add a review to db , I use this endpoint  "http://localhost:1337/reviews/?restaurant_id='+rest_id" . So When you add a review, you would check this endpoint and you will see there is a new comment inside. But the problem is that I fetch review data this endpoint = "localhost:1337/reviews" .
-When you go to this endpoint, you will see there is just 30 comments. I realized that you should set defaultLimit to mws-restaurant-stage-3.
+When you go to this endpoint, you will see there is just 30 comments.you should set defaultLimit to mws-restaurant-stage-3.
 
 Steps;
 
 mws-restaurant-stage-3 => config => blueprints.js => change //defaultLimit=30 to defaultLimit=60 (at the bottom of the page.) .  After that you will see everything it works.
-
-If you don't work again, I can add a video to project for make sure it is working. Because I tried multiple times, it is working 2 computers.
 
 ### What do I do from here?
 
